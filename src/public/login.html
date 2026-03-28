@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Iconos-->
+    <script src="https://kit.fontawesome.com/3469b67fa1.js" crossorigin="anonymous"></script>
+
+    <!-- CDN tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>login CoffeeSystem</title>
+</head>
+
+<body>
+    <div class="min-h-screen w-full overflow-hidden flex justify-center items-center bg-slate-100 bg-[linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95)),url('img/mosaico_login.png')] bg-cover bg-center h-64 w-full"  >
+        <div class="flex justify-center items-center p-8 rounded-lg shadow-lg bg-white">
+            <div class="w-68">
+                <div class="flex justify-center py-4">
+                    <i class="fa-solid fa-mug-hot text-xl text-orange-500"></i>
+                    <span class="pl-2 text-xl font-bold text-orange-500">Coffee <span
+                            class="text-slate-800">System</span></span>
+                </div>
+                <form action="/login" class="max-w-sm mx-auto pb-6">
+                    <div class="mb-5">
+                        <label for="login_alias" class="block mb-2.5 text-sm font-medium text-heading">Usuario</label>
+                        <input type="text" id="login_alias"
+                            class="bg-neutral-secondary-medium border border-slate-400 border-default-medium text-heading text-sm rounded-xl focus:ring-brand focus:border-brand block w-full px-3 py-3 shadow-xs placeholder:text-body"
+                            placeholder="usuario" required />
+                    </div>
+                    <div class="mb-5">
+                        <label for="login_password" class="block mb-2.5 text-sm font-medium text-heading">Contraseña</label>
+                        <input type="password" id="login_password"
+                            class="bg-neutral-secondary-medium border border-slate-400 border-default-medium text-heading text-sm rounded-xl focus:ring-brand focus:border-brand block w-full px-3 py-3 shadow-xs placeholder:text-body"
+                            placeholder="••••••••" required />
+                    </div>
+                    <button type="submit"
+                        class="mt-4 w-full py-3 xl:w-full xl:py-4 leading-5 rounded-2xl font-medium text-white ring-1 ring-emerald-200 bg-emerald-500 hover:bg-emerald-600 
+                                                        hover:text-white focus:bg-emerald-700 focus:text-white focus:ring-emerald-500 focus:outline-none">Iniciar
+                        Sesión</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

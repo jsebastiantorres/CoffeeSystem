@@ -1,0 +1,8 @@
+
+/* paleta de colores */
+:root {
+    --color-primario: oklch(70.5% 0.213 47.604);
+    --color-secundario: oklch(93.6% 0.032 17.717);
+    --color-texto: oklch(27.9% 0.041 260.031);
+    --color-secundario-texto: oklch(44.6% 0.043 257.281);
+}

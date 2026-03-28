@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "**COFFEE SYSTEM**\r Proyecto académico desarrollado para la materia Desarrollo Backend. Se trata de un sistema orientado a la gestión de ventas en una cafetería, construido inicialmente con HTML, CSS (utilizando el framework Tailwind) y JavaScript. En su siguiente fase, se implementará el backend con ExpressJS sobre Node.js, con el objetivo de integrar funcionalidades dinámicas y robustas para la administración de datos y procesos de venta.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.19.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
