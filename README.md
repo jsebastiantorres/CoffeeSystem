@@ -21,8 +21,8 @@ Proyecto académico desarrollado para la materia Desarrollo Backend. Se trata de
     **proceso en \APP desde consola:**
     1. npm init -y
     2. npm install express
-    ExpressJS 
-    nodemon
+    3. npm install --save-dev nodemon // reiniciar la applicacion al detectar cambios
+    4. npm install mysql2 // para gestionar la persistencia (base de)
 
 ## Gestor de base de datos
 ### MYSQL - instalar libreria MYSQL
@@ -30,7 +30,8 @@ Proyecto académico desarrollado para la materia Desarrollo Backend. Se trata de
     **proceso en \APP desde consola:**
     1. npm install mysql2
     2. **probar la conexion desde consola:**
-        APP\src\config>node db.js
+        APP\src\config>
+        node db.js
 
 
 

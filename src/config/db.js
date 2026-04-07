@@ -17,7 +17,6 @@ const pool = mysql.createPool({
 module.exports = pool;
 
 
-
 // verificacion de la conexion
 pool.getConnection().then(connection => {
         console.log(`Conexión exitosa a base de datos`);
