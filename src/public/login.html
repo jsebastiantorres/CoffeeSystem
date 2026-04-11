@@ -24,7 +24,8 @@
                     <span class="pl-2 text-xl font-bold text-orange-500">Coffee <span
                             class="text-slate-800">System</span></span>
                 </div>
-                <form action="/api/auth/login" method="POST" class="max-w-sm mx-auto pb-6">
+                <!-- la accion del form se gestionara desde login.js -->
+                <form id="form_login" onsubmit="handleSubmit(event)" class="max-w-sm mx-auto pb-6">
                     <div class="mb-5">
                         <label for="user" class="block mb-2.5 text-sm font-medium text-heading">Usuario</label>
                         <input type="text" name="user" id="user"
@@ -32,8 +33,7 @@
                             placeholder="usuario" required />
                     </div>
                     <div class="mb-5">
-                        <label for="password"
-                            class="block mb-2.5 text-sm font-medium text-heading">Contraseña</label>
+                        <label for="password" class="block mb-2.5 text-sm font-medium text-heading">Contraseña</label>
                         <input type="password" name="password" id="password"
                             class="bg-neutral-secondary-medium border border-slate-400 border-default-medium text-heading text-sm rounded-xl focus:ring-brand focus:border-brand block w-full px-3 py-3 shadow-xs placeholder:text-body"
                             placeholder="••••••••" required />
@@ -48,5 +48,7 @@
         </div>
     </div>
 </body>
+
+<script src="js/login.js"></script>
 
 </html>

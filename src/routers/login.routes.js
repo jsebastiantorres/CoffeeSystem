@@ -11,6 +11,7 @@ const loginMiddleware = require('../middlewares/login.middleware');
 const loginController = require('../controllers/login.controller');
 
 //5. definir la ruta (post para credenciales y sin parametros dinamicos)
+console.log("respuesta desde router login")
 router.post('/login', loginMiddleware.validarLogin, loginController.login);
 
 //6. exportar la ruta

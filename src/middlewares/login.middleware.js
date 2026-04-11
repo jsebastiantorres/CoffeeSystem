@@ -6,6 +6,8 @@ const validarLogin = (req, res, next) => {
     // Que trae el body
     const { user, password } = req.body;
 
+    console.log("datos recibidos en el middleware", user + password)
+
     // si alguno de los campos esta vacio
     if(!user || !password){
         return res.status(400).json({

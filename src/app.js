@@ -18,6 +18,7 @@ app.use(express.json()) // permite que express entienda JSON en el cuerpo body d
 app.use(express.urlencoded({ extended: true })); // permite recibir datos de formularios HTML
 
 
+
 // 4. REDIRECCIONAMIENTO INICIAL AL LOGIN
 app.get('/', (req, res) => {
     res.redirect('/login.html');

@@ -11,25 +11,53 @@ const login = async (req, res) => {
         const { user, password } = req.body;
 
         //4. llama la logica de negocio (servicio)
+        console.log("Se envia la solicitud al servicio")
         const usuario = await loginService.servicioVerificarLogin(user, password);
 
         //5. manejar el resultado SI HAY ERROR del negocio (servicio) 
-        if (usuario.error) {
+        if (!usuario) {
             console.error("Error recibido del SERVICIO")
-            return res.status(401).json({ mensaje: usuario.error });
+            return res.status(401).json({
+                success: false,
+                message: 'Credenciales incorrectas, intenta nuevamente',
+                action: "reload"
+            });
         }
 
         //6. respuesta exitosa del negocio (servicio)
         if (usuario) {
-            console.log("Login exitoso para:", usuario.alias);
+            console.log("Usuario encontrado con exito:", usuario.alias);
+            console.log(usuario)
 
-            return res.redirect('/index.html');
+            // Verificaciones de usuario
+            // 1. si el usuario esta activo (Todo OK)
+            if (usuario.estado == 1) {
+                console.log("Credenciales Todo OK ");
+                return res.status(200).json({
+                    success: true,
+                    message: "Bienvenido",
+                    redirectTo: '/index.html'
+                })
+            }
+
+            // 2. si el usuario no esta activo
+            if (!usuario.estado) {
+                console.error("El usuario no esta activo")
+                return res.status(403).json({
+                    success: false,
+                    message: "El usuario esta inactivo, contactar al administrador del sistema",
+                    action: "reload"
+                })
+            }
+
             // return res.status(200).json({ mensaje: "Inicio de sesion correcto", usuario: usuario.usuario });
+
         }
 
     } catch (error) {
         //7. gestión de errores esperados
         console.error("Error en el CONTROLADOR DE LOGIN", error);
+        // DISEÑAR PARA MOSTRAR EL ERROR Y REDIRECCIONAR A LOGIN NUEVAMENTE
         res.status(500).json({ mensaje: "error interno del servidor" })
     }
 }
